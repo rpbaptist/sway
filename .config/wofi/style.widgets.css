@@ -2,11 +2,11 @@
 Arc-Dark Color Scheme
 */
 
-@define-color highlight #5294e2;
-@define-color base1  #404552;
-@define-color base2  #40455;
-@define-color base3  #4b5160;
-
+@define-color highlight #d5c4a1;
+@define-color white ##ebdbb2;
+@define-color base1  #282828;
+@define-color base2  #1d2021;
+@define-color base3  #a89984l;
 
 *{
     font-family: UbuntuMono;
@@ -35,7 +35,7 @@ Arc-Dark Color Scheme
 
 #text {
 padding: 5px;
-color: white;
+color: @white;
 }
 
 #entry:nth-child(even){
