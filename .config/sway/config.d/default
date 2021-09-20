@@ -230,4 +230,4 @@ bindsym --whole-window --border $alt+Ctrl+button5 resize grow width 5 px or 5 pp
 #
 # Keybindings List
 #
-   #bindsym $mod+t exec xed ~/.config/sway/cheatsheet    
+   #bindsym $mod+t exec xed ~/.config/sway/cheatsheet
