@@ -1,4 +1,5 @@
 # Assign workspaces
+
 assign [app_id="firefox"] 2
 for_window [app_id="firefox"] focus
 
@@ -11,9 +12,9 @@ for_window [app_id=thunar] focus
 assign [class="Telegram"] 4
 for_window [class="Telegram"] focus
 
-
 for_window [app_id="xed"] focus
 
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 8
 
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable
