@@ -5,62 +5,68 @@
  * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
  *
  * =========================================================================== */
- 
+
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
- /*
-Arc-Dark Color Scheme
+/*
+Gruvbox Color Scheme
 */
 
-@define-color highlight #5294e2 ;
-@define-color base1  #404552 ;
+@define-color bg #282828;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color purple #b16286;
+@define-color aqua #689d68;
+@define-color gray #a89984;
+@define-color bghard #1d2021;
+@define-color white #ebdbb2;
+@define-color beige #d5c4a1;
 
- 
- 
 @keyframes blink-warning {
-    70% {
-        color: white;
-    }
- 
-    to {
-        color: white;
-        background-color: orange;
-    }
+  70% {
+    color: @white;
+  }
+
+  to {
+    color: @white;
+    background-color: @yellow;
+  }
 }
- 
+
 @keyframes blink-critical {
-    70% {
-      color: white;
-    }
- 
-    to {
-        color: white;
-        background-color: red;
-    }
+  70% {
+    color: @white;
+  }
+
+  to {
+    color: @white;
+    background-color: @red;
+  }
 }
- 
- 
+
 /* -----------------------------------------------------------------------------
  * Base styles
  * -------------------------------------------------------------------------- */
- 
+
 /* Reset all styles */
 * {
-    border: none;
-    border-radius: 0;
-    min-height: 0;
-    margin: 1px;
-    padding: 0;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 1px;
+  padding: 0;
 }
 
 /* The whole bar */
 #waybar {
-    background: transparent;
-    color: #bebebe;
-    background-color: @base1;
-    font-family: UbuntuMono;
-    font-size: 14px;
+  background: transparent;
+  color: @beige;
+  background-color: @bg;
+  font-family: Source Code Pro;
+  font-size: 11px;
 }
 
 /* Each module */
@@ -77,134 +83,126 @@ Arc-Dark Color Scheme
 #temperature,
 #tray,
 #idle_inhibitor,
-#custom-PBPbattery{
-      padding:0.5rem 0.6rem;
-      margin: 1px 0px;
+#custom-PBPbattery {
+  padding: 0.5rem 0.6rem;
+  margin: 1px 0px;
 }
 
-
- 
- 
 /* -----------------------------------------------------------------------------
  * Module styles
  * -------------------------------------------------------------------------- */
- 
+
 #battery {
-        
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-}
- 
-#battery.warning {
-        color: orange;
-}
- 
-#battery.critical {
-        color: red;
-}
- 
-#battery.warning.discharging {
-        animation-name: blink-warning;
-        animation-duration: 3s;
-}
- 
-#battery.critical.discharging {
-        animation-name: blink-critical;
-        animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#cpu{
- 
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#battery.warning.discharging {
+  animation-name: blink-warning;
+  animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+  animation-name: blink-critical;
+  animation-duration: 2s;
+}
+
+#cpu {
 }
 #cpu.warning {
-        color: orange;
-}
- 
-#cpu.critical {
-        color: red;
-}
- 
-#memory {
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-}
- 
-#memory.warning {
-        color: orange;
- }
- 
-#memory.critical {
-        color: red;
-        animation-name: blink-critical;
-        animation-duration: 2s;
-        padding-left:5px;
-        padding-right:5px;
-}
- 
-#mode {
-    background: @highlight;
-    border-bottom: 3px transparent;
-    color:white;
-    margin-left: 5px;
-    padding:7;
-  }
- 
-#network.disconnected {
-        color: orange;
+  color: @yellow;
 }
 
-#pulseaudio{
-padding-top:6px;
-} 
+#cpu.critical {
+  color: @red;
+}
+
+#memory {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#memory.warning {
+  color: @yellow;
+}
+
+#memory.critical {
+  color: @red;
+  animation-name: blink-critical;
+  animation-duration: 2s;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mode {
+  background: @beige;
+  border-bottom: 3px transparent;
+  color: @white;
+  margin-left: 5px;
+  padding: 7;
+}
+
+#network.disconnected {
+  color: @yellow;
+}
+
+#pulseaudio {
+  padding-top: 6px;
+}
 #pulseaudio.muted {
-    color: @highlight; 
+  color: @beige;
 }
- 
+
 #temperature.critical {
-        color: red;
+  color: @red;
 }
- 
+
 #window {
-        font-weight: bold;
+  font-weight: bold;
 }
- 
-#workspaces{
-font-size:13px;
+
+#workspaces {
+  font-size: 13px;
 }
 #workspaces button {
-    border-bottom: 3px solid transparent;
-    margin-bottom: 0px;
-    padding:0px;
-    
+  border-bottom: 3px solid transparent;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
 #workspaces button.focused {
-     border-bottom: 3px solid  @highlight;
-     margin-bottom: 1px;
-     padding-left:0;
-  }
+  border-bottom: 3px solid @beige;
+  margin-bottom: 1px;
+  padding-left: 0;
+}
 
 #workspaces button.urgent {
-        border-color: #c9545d;
-        color: #c9545d;
-}
- 
-#custom-power{
-   margin-left:15px;
-   margin-right:15px;
-   font-size:15px;
-}   
-#custom-launcher{
-   font-size:15px;
-   margin-left:15px;
-   margin-right:10px;
- }   
-
-#backlight.icon{
- padding-right:1px;
- font-size: 13px;	
+  border-color: @red;
+  color: @red;
 }
 
+#custom-power {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 15px;
+}
+#custom-launcher {
+  font-size: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
 
+#backlight.icon {
+  padding-right: 1px;
+  font-size: 13px;
+}
