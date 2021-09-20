@@ -35,7 +35,6 @@
  
 // Modules
 
-
 "idle_inhibitor": {
   "format": "{icon} ",
   "format-icons":{
@@ -198,7 +197,7 @@
  
 "custom/terminal": {
     	"format": " ",
-    	"on-click": "exec alacritty",
+    	"on-click": "exec tilix",
     	"tooltip": false
 },
  
@@ -221,4 +220,3 @@
     	},
 
 }
-
