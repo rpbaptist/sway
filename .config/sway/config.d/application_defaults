@@ -50,3 +50,8 @@ for_window [app_id="firefox" title="Firefox — Sharing Indicator"] kill
 # Inhibit idle
 for_window [app_id="firefox"] inhibit_idle fullscreen
 for_window [app_id="Chromium"] inhibit_idle fullscreen
+
+#for_window [app_id="copyq"]    floating enable, resize set 40 ppt 60 ppt, border pixel 2
+for_window [title="Bitwarden"] floating enable, resize set 40 ppt 60 ppt, border pixel 2
+for_window [class="Slack"] floating enable, resize set 40 ppt 60 ppt, border pixel 2
+for_window [app_id="gnome-calculator"] floating enable, resize set 20 ppt 20 ppt, border pixel 2
